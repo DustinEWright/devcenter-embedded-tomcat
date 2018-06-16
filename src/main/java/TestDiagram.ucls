@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="part2.Tester" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/Tester.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="95" width="114" x="49" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="part2.MarkovModel" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/MarkovModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="153" x="29" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="part2.MarkovZero" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/MarkovZero.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="131" width="153" x="222" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="part2.IMarkovModel" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/IMarkovModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="153" x="415" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="5" language="java" name="part2.MarkovRunnerWithInterface" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/MarkovRunnerWithInterface.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="131" width="230" x="223" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="part2.MarkovOne" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/MarkovOne.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="153" x="608" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="part2.MarkovFour" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/MarkovFour.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="149" width="153" x="801" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="part2.AbstractMarkovModel" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/AbstractMarkovModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="239" width="213" x="512" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="part2.EfficientMarkovModel" project="dukejavac4w3" 
+    file="/dukejavac4w3/src/main/java/part2/EfficientMarkovModel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="221" width="153" x="994" y="494"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="10">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="11">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <realization id="14">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <generalization id="15">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
