@@ -63,14 +63,16 @@ public class MarkovRunnerWithInterface {
 	// markov.setRandom(seed).
 	// class is used in the assignment. That's wrong, should be method.
 
-	public void runModel(IMarkovModel markov, String text, int size, int seed) {
+	public String runModel(IMarkovModel markov, String text, int size, int seed) {
 		markov.setTraining(text);
 		markov.setRandom(seed);
+		StringBuilder sb = new StringBuilder();
 		System.out.println("running with " + markov);
 		for (int k = 0; k < 3; k++) {
 			String st = markov.getRandomText(size);
-			printOut(st);
+			sb.append(st);
 		}
+		return sb.toString();
 	}
 
 	public void runMarkov(int seed) {
