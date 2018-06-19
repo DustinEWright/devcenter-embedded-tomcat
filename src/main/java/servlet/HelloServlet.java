@@ -24,7 +24,7 @@ public class HelloServlet extends HttpServlet {
 		EfficientMarkovModel emm = new EfficientMarkovModel(keyLength);
 		// emm.setTraining("yes-this-is-a-thin-pretty-pink-thistle");
 		// String text = emm.getTraining();
-		String text = "yes-this-is-a-thin-pretty-pink-thistle";
+		String text = "new material has now been added to our training set yes-this-is-a-thin-pretty-pink-thistle";
 		// emm.buildMap();
 		MarkovRunnerWithInterface mrwi = new MarkovRunnerWithInterface();
 		String markovText = mrwi.runModel(emm, text, size, seed);
