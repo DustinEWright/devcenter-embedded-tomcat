@@ -20,6 +20,7 @@ public class HelloServlet extends HttpServlet {
 		int keyLength = 2;
 		int seed = 42;
 		int size = 5000;
+		String length = req.getParameter("length");
 		EfficientMarkovModel emm = new EfficientMarkovModel(keyLength);
 		// emm.setTraining("yes-this-is-a-thin-pretty-pink-thistle");
 		// String text = emm.getTraining();
@@ -27,6 +28,8 @@ public class HelloServlet extends HttpServlet {
 		// emm.buildMap();
 		MarkovRunnerWithInterface mrwi = new MarkovRunnerWithInterface();
 		String markovText = mrwi.runModel(emm, text, size, seed);
+		markovText += "\nYou passed a value of length: " + length;
+
 		ServletOutputStream out = resp.getOutputStream();
 		out.write(markovText.getBytes());
 		out.flush();

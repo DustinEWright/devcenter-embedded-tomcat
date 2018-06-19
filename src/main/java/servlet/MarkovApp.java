@@ -12,7 +12,7 @@ public class MarkovApp {
 		EfficientMarkovModel emm = new EfficientMarkovModel(keyLength);
 		//emm.setTraining("yes-this-is-a-thin-pretty-pink-thistle");
 		//String text = emm.getTraining();
-		String text = "yes-this-is-a-thin-pretty-pink-thistle";
+		String text = "aaaaaaaaaaaaaaayes-this-is-a-thin-pretty-pink-thistle";
 		//emm.buildMap();
 		MarkovRunnerWithInterface mrwi = new MarkovRunnerWithInterface();
 		String markovText = mrwi.runModel(emm, text, size, seed);
