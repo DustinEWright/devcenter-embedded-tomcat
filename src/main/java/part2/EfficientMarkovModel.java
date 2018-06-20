@@ -100,7 +100,7 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
 	// can look up the ArrayList of Strings, instead of computing it each time.
 
 	public ArrayList<String> getFollows(String key) {
-		System.out.println("key " + key + " follows: " + map.get(key));
+		//System.out.println("key " + key + " follows: " + map.get(key));
 		return map.get(key);
 	}
 
@@ -157,7 +157,7 @@ public class EfficientMarkovModel extends AbstractMarkovModel {
 	// https://github.com/briennakh/java-programming-and-software-engineering-fundamentals/blob/master/4.%20Java%20programming%20-%20principles%20of%20software%20design/Week%203/2.%20Programming%20exercise%20-%20interface%20and%20abstract%20class/EfficientMarkovModel.java
 
 	public String getRandomText(int numChars) {
-		System.out.println("getRandomText Efficient Markov Model Called");
+	//	System.out.println("getRandomText Efficient Markov Model Called");
 		// compare with Brienna
 		// don't know why she has this
 		if (myText == null) {

@@ -67,7 +67,7 @@ public class MarkovRunnerWithInterface {
 		markov.setTraining(text);
 		markov.setRandom(seed);
 		StringBuilder sb = new StringBuilder();
-		System.out.println("running with " + markov);
+		//System.out.println("running with " + markov);
 		for (int k = 0; k < 3; k++) {
 			String st = markov.getRandomText(size);
 			sb.append(st);
