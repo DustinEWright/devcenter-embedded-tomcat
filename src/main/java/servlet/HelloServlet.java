@@ -3,8 +3,8 @@ package servlet;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -24,14 +24,26 @@ public class HelloServlet extends HttpServlet {
 		int keyLength = 2;
 		int seed = 42;
 		int size = 5000;
+		String training = "";
+
+		Scanner sc = new Scanner(System.in);		
+		System.out.println("Select Training Text ts or ge: ");
+		sc.next();
+		
+		
+		
+		training = req.getParameter("training");
+		training = urlReader(training);
+
 		String length = req.getParameter("length");
 		EfficientMarkovModel emm = new EfficientMarkovModel(keyLength);
 		// emm.setTraining("yes-this-is-a-thin-pretty-pink-thistle");
 		// String text = emm.getTraining();
-		String text = "new material has now been added to our training set yes-this-is-a-thin-pretty-pink-thistle";
+		// String text = "new material has now been added to our training set
+		// yes-this-is-a-thin-pretty-pink-thistle";
 		// emm.buildMap();
 		MarkovRunnerWithInterface mrwi = new MarkovRunnerWithInterface();
-		String markovText = mrwi.runModel(emm, text, size, seed);
+		String markovText = mrwi.runModel(emm, training, size, seed);
 		markovText += "\nYou passed a value of length: " + length;
 
 		ServletOutputStream out = resp.getOutputStream();
