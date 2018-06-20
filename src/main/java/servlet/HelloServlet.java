@@ -26,13 +26,11 @@ public class HelloServlet extends HttpServlet {
 		int size = 5000;
 		String training = "";
 
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);		
-		System.out.println("Select Training Text ts or ge: ");
-		sc.next();
-		
-		
-		
-		training = req.getParameter("training");
+		System.out.println("Which Training Text, ts or ge?  ");
+		training = sc.next(req.getParameter("training"));
+		sc.close();
 		training = urlReader(training);
 
 		String length = req.getParameter("length");
