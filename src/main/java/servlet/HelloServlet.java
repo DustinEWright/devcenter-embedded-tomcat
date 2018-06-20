@@ -1,6 +1,10 @@
 package servlet;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -36,4 +40,26 @@ public class HelloServlet extends HttpServlet {
 		out.close();
 	}
 
+	public String urlReader(String urlString) throws IOException {
+		URL ts = new URL("http://www.gutenberg.org/files/74/74-0.txt");
+		URL ge = new URL("http://www.gutenberg.org/files/1400/1400-0.txt");
+		String inputLine = "none found";
+
+		if (urlString.equals(ts.toString())) {
+			BufferedReader in = new BufferedReader(new InputStreamReader(ts.openStream()));
+			while ((inputLine = in.readLine()) != null) {
+				System.out.println(inputLine);
+			}
+			in.close();
+		}
+
+		if (urlString.equals(ge.toString())) {
+			BufferedReader in = new BufferedReader(new InputStreamReader(ge.openStream()));
+			while ((inputLine = in.readLine()) != null) {
+				System.out.println(inputLine);
+			}
+			in.close();
+		}
+		return inputLine;
+	}
 }
