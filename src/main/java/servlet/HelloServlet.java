@@ -24,13 +24,8 @@ public class HelloServlet extends HttpServlet {
 		int keyLength = 2;
 		int seed = 42;
 		int size = 5000;
-		String training = "";
 
-		@SuppressWarnings("resource")
-		Scanner sc = new Scanner(System.in);		
-		System.out.println("Which Training Text, ts or ge?  ");
-		training = sc.next(req.getParameter("training"));
-		sc.close();
+		String training = req.getParameter("training");
 		training = urlReader(training);
 
 		String length = req.getParameter("length");
@@ -53,7 +48,7 @@ public class HelloServlet extends HttpServlet {
 	public String urlReader(String urlString) throws IOException {
 		URL ts = new URL("http://www.gutenberg.org/files/74/74-0.txt");
 		URL ge = new URL("http://www.gutenberg.org/files/1400/1400-0.txt");
-		String inputLine = "none found";
+		String inputLine = "zzzzzzzzzzzzzzzzzzzzzzz";
 
 		if (urlString.equals(ts.toString())) {
 			BufferedReader in = new BufferedReader(new InputStreamReader(ts.openStream()));
@@ -72,4 +67,9 @@ public class HelloServlet extends HttpServlet {
 		}
 		return inputLine;
 	}
+	
+	 public String getGutenburgUrl(String training) {
+		return training;		 
+	 }
+	
 }
