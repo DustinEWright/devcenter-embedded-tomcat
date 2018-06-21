@@ -32,9 +32,8 @@ public class HelloServlet extends HttpServlet {
 		EfficientMarkovModel emm = new EfficientMarkovModel(keyLength);
 		// emm.setTraining("yes-this-is-a-thin-pretty-pink-thistle");
 		// String text = emm.getTraining();
-		// String text = "new material has now been added to our training set
-		// yes-this-is-a-thin-pretty-pink-thistle";
-		// emm.buildMap();
+	//	 String text = "new material has now been added to our training set yes-this-is-a-thin-pretty-pink-thistle";
+		 emm.buildMap();
 		MarkovRunnerWithInterface mrwi = new MarkovRunnerWithInterface();
 		String markovText = mrwi.runModel(emm, training, size, seed);
 		markovText += "\nYou passed a value of length: " + length;
@@ -46,9 +45,9 @@ public class HelloServlet extends HttpServlet {
 	}
 
 	public String urlReader(String urlString) throws IOException {
-		URL ts = new URL("http://www.gutenberg.org/files/74/74-0.txt");
-		URL ge = new URL("http://www.gutenberg.org/files/1400/1400-0.txt");
-		String inputLine = "zzzzzzzzzzzzzzzzzzzzzzz";
+		URL ts = new URL("http:www.gutenberg.org/files/74/74-0.txt");
+		URL ge = new URL("http:www.gutenberg.org/files/1400/1400-0.txt");
+		String inputLine = "";
 
 		if (urlString.equals(ts.toString())) {
 			BufferedReader in = new BufferedReader(new InputStreamReader(ts.openStream()));
@@ -66,6 +65,7 @@ public class HelloServlet extends HttpServlet {
 			in.close();
 		}
 		return inputLine;
+
 	}
 	
 	 public String getGutenburgUrl(String training) {
