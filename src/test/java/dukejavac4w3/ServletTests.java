@@ -9,7 +9,7 @@ import servlet.HelloServlet;
 public class ServletTests {
 
 	// @Before
-	// public void creatClass() {
+	// public void createClass() {
 	// HelloServlet hs = new HelloServlet();
 	// }
 
